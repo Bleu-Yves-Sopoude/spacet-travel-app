@@ -4,8 +4,6 @@ import Navigations from './components/Navigations';
 import Rocket from './components/Rocket';
 import Mission from './components/Mission';
 
-//import myProfile from './components/Mission';
-
 function App() {
   return (
     <div>
