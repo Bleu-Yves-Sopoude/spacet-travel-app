@@ -1,8 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Navigations = () => {
-  return (
+const Navigations = () =>  (
     <nav className="navigation row">
       <h1 className="Text-Style-3">Space X</h1>
       <ul className="row">
@@ -24,6 +23,6 @@ const Navigations = () => {
       </ul>
     </nav>
   );
-};
+
 
 export default Navigations;
