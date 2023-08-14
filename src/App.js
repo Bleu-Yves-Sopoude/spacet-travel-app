@@ -1,11 +1,21 @@
-
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Navigations from './components/Navigations';
+import Rocket from './components/Rocket';
+import Mission from './components/Mission';
+import myProfile from './components/myProfile';
 
 function App() {
   return (
-    <div className="App">
+    <div >
+      
 
-      <h4> Hello Space traveller</h4>
+      <Navigations />
+      <Routes>
+        <Route path="/" element={<Rocket />} />
+        <Route path="/missions" element={<Mission />} />
+        <Route path="/profile" element={<myProfile />} />
+      </Routes>
       
     </div>
   );
