@@ -1,8 +1,6 @@
 .link,
 .pale {
   text-decoration: none;
-  
-  
 }
 
 .bookCard {
@@ -16,7 +14,6 @@
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
-
 
 .active {
   opacity: 1;
@@ -35,27 +32,27 @@ body {
 
 nav {
   display: flex;
-  justify-content:space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #cfd8dc; 
+  background: #cfd8dc;
 }
 
 nav ul {
   display: flex;
-  list-style: none; 
+  list-style: none;
 }
 
 nav li {
-  padding-left: 1rem; 
+  padding-left: 1rem;
 }
 
 nav a {
   text-decoration: none;
-  color: #0d47a1
+  color: #0d47a1;
 }
 
- /* 
+/* 
   Extra small devices (phones, 600px and down) 
 */
 @media only screen and (max-width: 600px) {
@@ -69,4 +66,4 @@ nav a {
   nav li {
     padding: 0.5rem 0;
   }
-} 
+}
