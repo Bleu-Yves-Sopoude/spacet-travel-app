@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchmissions } from '../redux/missions/missionsSlice';
 import { Table } from 'react-bootstrap';
+import { fetchmissions } from '../redux/missions/missionsSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -15,30 +15,32 @@ const Mission = () => {
   }
 
   if (error) {
-    return <p>Error: {error}</p>;
+    return <p>
+      Error: 
+      {error}</p>;
   }
 
   return (
     <div>
       <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {missions.map((mission) => (
-          <tr key={mission.mission_id}>
-            <td><h5>{mission.mission_name}</h5></td>
-            <td><p>{mission.description}</p></td>
-            <td><p>Coming Soon</p></td>
-            <td>Coming Soon</td>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th></th>
           </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <td><h5>{mission.mission_name}</h5></td>
+              <td><p>{mission.description}</p></td>
+              <td><p>Coming Soon</p></td>
+              <td>Coming Soon</td>
+            </tr>
         ))}
-      </tbody>
+        </tbody>
       </Table>
     </div>
   );
