@@ -17,7 +17,8 @@ const Mission = () => {
   if (error) {
     return (
       <p>
-        Error: {error}
+        Error: 
+          {error}
       </p>
     );
   }
@@ -30,7 +31,7 @@ const Mission = () => {
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th></th>
+            <th>&nbsp;</th>
           </tr>
         </thead>
         <tbody>
