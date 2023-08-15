@@ -17,8 +17,8 @@ const Mission = () => {
   if (error) {
     return (
       <p>
-        Error: 
-          {error}
+        Error:
+        {error}
       </p>
     );
   }
