@@ -1,15 +1,13 @@
-import {createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState ={
-    rocketItems:[],
-    isLoading:true
-}
+const initialState = {
+  rocketItems: [],
+  isLoading: true,
+};
 
 const rocketsSlice = createSlice({
-    name:'rockets',
-    initialState,
-
+  name: "rockets",
+  initialState,
 });
 
-export default rocketsSlice.createSlice;
-
+export default rocketsSlice.reducer;
