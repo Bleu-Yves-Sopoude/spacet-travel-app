@@ -29,14 +29,11 @@ const missionsSlice = createSlice({
       })
       .addCase(fetchmissions.fulfilled, (state, action) => {
         state.isLoading = false;
-        const data = Object.keys(action.payload).map((item) => {
-          const missions = {};
-          missions.mission_name = action.payload[item][0].mission_name;
-          missions.description = action.payload[item][0].description;
-          missions.mission_id = item;
-          return missions;
-        });
-        state.missions = data;
+        state.missions = action.payload.map((item) => ({
+          mission_name: item.mission_name,
+          description: item.description,
+          mission_id: item.mission_id,
+        }));
       })
       .addCase(fetchmissions.rejected, (state, action) => {
         state.isLoading = false;
