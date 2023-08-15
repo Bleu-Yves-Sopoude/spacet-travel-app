@@ -1,7 +1,7 @@
-import React from "react";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchRockets } from "../redux/rockets/rocketsSlice.js";
+import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchRockets } from '../redux/rockets/rocketsSlice';
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
@@ -24,10 +24,11 @@ const Rocket = () => {
                 <h2>{e.name}</h2>
                 <p>
                   {!e.reserved && (
-                    <p style={{ background: "red", padding: "40px" }}>
+                    <p style={{ background: 'red', padding: '40px' }}>
                       Reserved
                     </p>
-                  )}{" "}
+                  )}
+                  {''}
                   {e.description}
                 </p>
               </li>
