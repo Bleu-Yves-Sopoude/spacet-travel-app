@@ -1,17 +1,3 @@
-// import { createSlice } from '@reduxjs/toolkit';
-
-// const initialState = {
-//   missionItems: [],
-//   isLoading: true,
-// };
-
-// const missionsSlice = createSlice({
-//   name: 'missions',
-//   initialState,
-// });
-
-// export default missionsSlice.reducer;
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -45,10 +31,9 @@ const missionsSlice = createSlice({
         state.isLoading = false;
         const data = Object.keys(action.payload).map((item) => {
           const missions = {};
-          missions.author = action.payload[item][0].author;
-          missions.category = action.payload[item][0].category;
-          missions.title = action.payload[item][0].title;
-          missions.item_id = item;
+          missions.mission_name = action.payload[item][0].mission_name;
+          missions.description = action.payload[item][0].description;
+          missions.mission_id = item;
           return missions;
         });
         state.missions = data;
