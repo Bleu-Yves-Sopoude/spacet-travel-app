@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const rocketsSlice = createSlice({
-  name: "rockets",
+  name: 'rockets',
   initialState,
 });
 
