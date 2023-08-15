@@ -8,11 +8,11 @@ const Rocket = () => {
 
   useEffect(() => {
     dispatch(fetchRockets());
-  }, [dispatch]);
+  }, [dispatch, rocketsdata]);
 
   return (
     <div>
-      
+      <h1>Rocket</h1>
     </div>
   );
 };
