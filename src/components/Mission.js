@@ -15,9 +15,11 @@ const Mission = () => {
   }
 
   if (error) {
-    return <p>
-      Error: 
-      {error}</p>;
+    return (
+      <p>
+        Error: {error}
+      </p>
+    );
   }
 
   return (
@@ -39,7 +41,7 @@ const Mission = () => {
               <td><p>Coming Soon</p></td>
               <td>Coming Soon</td>
             </tr>
-        ))}
+          ))}
         </tbody>
       </Table>
     </div>
