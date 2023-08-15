@@ -9,8 +9,8 @@ const Mission = () => {
   }, [dispatch]);
   return (
     <div>
-    <h4>Missions</h4>
-  </div>
+      <h4>Missions</h4>
+    </div>
   );
 };
 
