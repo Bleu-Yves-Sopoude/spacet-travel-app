@@ -1,12 +1,12 @@
-import { React, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   cancelReservation,
   fetchRockets,
   bookRocket as bookrocketAction,
   cancelBooking as cancelBookingAction,
-} from "../redux/rockets/rocketsSlice";
-import classes from "./Rocket.css";
+} from '../redux/rockets/rocketsSlice';
+import classes from './Rocket.css';
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
@@ -46,7 +46,7 @@ const Rocket = () => {
                 </p>
                 <button
                   type="button"
-                  className={rocket.reserved ? classes.cancel : ""}
+                  className={rocket.reserved ? classes.cancel : ''}
                   onClick={() => {
                     if (!rocket.reserved) {
                       bookRocket(rocket.id);
