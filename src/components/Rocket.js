@@ -10,7 +10,7 @@ const Rocket = () => {
 
   useEffect(() => {
     dispatch(fetchRockets());
-  }, [dispatch]);
+  }, [dispatch, rocketsdata]);
 
   return (
     <div>
