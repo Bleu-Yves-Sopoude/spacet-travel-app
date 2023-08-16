@@ -18,9 +18,9 @@ export const fetchmissions = createAsyncThunk('missions/fetchmissions', async ()
   }
 });
 
-export const joinmission = createAsyncThunk('missions/joinmission', async (missionId) => {
+export const joinmission = createAsyncThunk('missions/joinmission', async ({ missionId, reserved }) => {
   try {
-    return missionId;
+    return { missionId, reserved };
   } catch (error) {
     return Promise.reject(error.message);
   }
@@ -49,10 +49,10 @@ const missionsSlice = createSlice({
         state.error = action.payload;
       })
       .addCase(joinmission.fulfilled, (state, action) => {
-        const missionId = action.payload;
+        const { missionId, reserved } = action.payload;
         state.missions = state.missions.map((mission) => {
           if (mission.mission_id === missionId) {
-            return { ...mission, reserved: true };
+            return { ...mission, reserved };
           }
           return mission;
         });
