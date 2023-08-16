@@ -1,10 +1,10 @@
-import { React, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchRockets,
   bookRocket as bookrocketAction,
-} from "../redux/rockets/rocketsSlice";
-import classes from "./Rocket.css";
+} from '../redux/rockets/rocketsSlice';
+import classes from './Rocket.css';
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
