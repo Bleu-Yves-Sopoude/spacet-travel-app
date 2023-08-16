@@ -1,7 +1,10 @@
 import { React, useEffect } from 'react';
-import './Rocket.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import {
+  fetchRockets,
+  bookRocket as bookrocketAction,
+} from '../redux/rockets/rocketsSlice';
+import classes from './Rocket.css';
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
@@ -9,7 +12,11 @@ const Rocket = () => {
 
   useEffect(() => {
     dispatch(fetchRockets());
-  }, [dispatch, rocketsdata]);
+  }, [dispatch]);
+
+  const bookRocket = (id) => {
+    dispatch(bookrocketAction(id));
+  };
 
   return (
     <div>
@@ -22,15 +29,19 @@ const Rocket = () => {
               <div className="rocketImgageContainer">
                 <img src={rocket.flickr_images} alt="" />
               </div>
-
               <div className="rocketDescription">
-                <h2>
-                  {rocket.name}
-                </h2>
+                <h2>{rocket.name}</h2>
                 <p>
                   <>{rocket.reserved && <span>reserved</span>}</>
                   {rocket.description}
                 </p>
+                <button
+                  type="button"
+                  className={rocket.reserved && classes.cancel}
+                  onClick={() => bookRocket(rocket.id)}
+                >
+                  {rocket.reserved ? <>cancel reservation </> : <>reserve</>}
+                </button>
               </div>
             </li>
           ))}
