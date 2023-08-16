@@ -1,14 +1,14 @@
-import React, { useMemo } from "react";
-import { useSelector } from "react-redux";
-import classes from "./myProfile.css";
+import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+import classes from './myProfile.css';
 
 const Profile = () => {
   const rockets = useSelector((state) => state.rockets.data);
 
-  const myReservedRockets = useMemo(
-    () => rockets.filter((rocket) => rocket.reserved === true),
-    []
-  );
+  const myReservedRockets = useMemo(() =>
+    rockets.filter((rocket) => rocket.reserved === true)
+  , []);
+
 
   return (
     <div className="profile-container">
