@@ -1,7 +1,7 @@
-import { React, useEffect } from 'react';
-import './Rocket.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import { React, useEffect } from "react";
+import "./Rocket.css";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchRockets } from "../redux/rockets/rocketsSlice";
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
@@ -24,7 +24,9 @@ const Rocket = () => {
               </div>
 
               <div className="rocketDescription">
-                <h2> {rocket.name} </h2>
+                <h2>
+                  {rocket.name}
+                </h2>
                 <p>
                   <>{rocket.reserved && <span>reserved</span>}</>
                   {rocket.description}
