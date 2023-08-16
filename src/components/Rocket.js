@@ -4,7 +4,7 @@ import {
   cancelReservation,
   fetchRockets,
   bookRocket as bookrocketAction,
-  cancelBooking as cancelBookingAction 
+  cancelBooking as cancelBookingAction,
 } from '../redux/rockets/rocketsSlice';
 import classes from './Rocket.css';
 
@@ -16,40 +16,45 @@ const Rocket = () => {
     dispatch(fetchRockets());
   }, [dispatch]);
 
- 
-
   const bookRocket = (rocketId, reserved) => {
-    if(reserved){
+    if (reserved) {
       dispatch(cancelReservation(rocketId));
-    }
-    else{
+    } else {
       dispatch(bookrocketAction(rocketId));
     }
-  }
+  };
   const cancelBooking = (id) => {
-    dispatch(cancelBookingAction((id)))
-  }
+    dispatch(cancelBookingAction(id));
+  };
 
   return (
     <div>
       {rocketsdata.loading ? (
         <div>Loading ...</div>
       ) : (
-        <ul className="rocketsList">
+        <ul className='rocketsList'>
           {rocketsdata.data.map((rocket) => (
             <li key={rocket.id}>
-              <div className="rocketImgageContainer">
-                <img src={rocket.flickr_images} alt="" />
+              <div className='rocketImgageContainer'>
+                <img src={rocket.flickr_images} alt='' />
               </div>
-              <div className="rocketDescription">
+              <div className='rocketDescription'>
                 <h2>{rocket.name}</h2>
                 <p>
                   <>{rocket.reserved && <span>reserved</span>}</>
                   {rocket.description}
                 </p>
-                <button className={rocket.reserved && classes.cancel} onClick={() => !rocket.reserved ? bookRocket(rocket.id) : cancelBooking(rocket.id)}> {rocket.reserved ? <>cancel reservation </> : <>reserve</>}</button>
-                </div>
-              
+                <button
+                  className={rocket.reserved && classes.cancel}
+                  onClick={() =>
+                    !rocket.reserved
+                      ? bookRocket(rocket.id)
+                      : cancelBooking(rocket.id)
+                  }
+                >
+                  {rocket.reserved ? <>cancel reservation </> : <>reserve</>}
+                </button>
+              </div>
             </li>
           ))}
         </ul>
