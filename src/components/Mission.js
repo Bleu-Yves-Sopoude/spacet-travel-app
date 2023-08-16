@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
-import { fetchmissions } from '../redux/missions/missionsSlice';
+import Button from 'react-bootstrap/Button';
+import { fetchmissions, joinmission } from '../redux/missions/missionsSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -9,6 +10,10 @@ const Mission = () => {
   useEffect(() => {
     dispatch(fetchmissions());
   }, [dispatch]);
+
+  const handlejoinmission = (missionId) => {
+    dispatch(joinmission(missionId));
+  };
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -40,7 +45,7 @@ const Mission = () => {
               <td><h5>{mission.mission_name}</h5></td>
               <td><p>{mission.description}</p></td>
               <td><p>Coming Soon</p></td>
-              <td>Coming Soon</td>
+              <td><Button variant="outline-dark" onClick={() => handlejoinmission(mission.mission_id)}>Join Mission</Button></td>
             </tr>
           ))}
         </tbody>
