@@ -45,7 +45,7 @@ const Mission = () => {
               <td><h5>{mission.mission_name}</h5></td>
               <td><p>{mission.description}</p></td>
               <td><p>Coming Soon</p></td>
-              <td><Button variant="outline-dark" onClick={() => handlejoinmission(mission.mission_id)}>Join Mission</Button></td>
+              <td className="d-flex align-items-center"><Button variant="outline-dark" onClick={() => handlejoinmission(mission.mission_id)}>Join Mission</Button></td>
             </tr>
           ))}
         </tbody>

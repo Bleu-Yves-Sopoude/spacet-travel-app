@@ -20,9 +20,6 @@ export const fetchmissions = createAsyncThunk('missions/fetchmissions', async ()
 
 export const joinmission = createAsyncThunk('missions/joinmission', async (missionId) => {
   try {
-    // Simulate API call to join mission
-    // You can replace this with your actual API call
-    // For now, we'll just return the missionId
     return missionId;
   } catch (error) {
     return Promise.reject(error.message);
