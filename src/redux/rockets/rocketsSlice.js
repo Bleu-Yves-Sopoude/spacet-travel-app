@@ -5,7 +5,7 @@ const initialState = {
   data: [],
   status: 'idle',
   error: null,
-  loading: false
+  loading: false,
 };
 
 export const fetchRockets = createAsyncThunk('rockets/fetchData', async () => {
@@ -33,13 +33,13 @@ const rocketsSlice = createSlice({
     bookRocket: (state, action) => {
       const bookRocket = state.data.map((rocket) => {
         if (rocket.id === action.payload) {
-          return { ...rocket, reserved: true }
-        } else {
-          return { ...rocket }
+          return { ...rocket, reserved: true };
+        }  {
+          return { ...rocket };
         }
       });
-      state.data = bookRocket
-    }
+      state.data = bookRocket;
+    },
   },
   extraReducers: (builder) => {
     builder
