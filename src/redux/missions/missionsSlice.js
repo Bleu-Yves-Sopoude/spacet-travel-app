@@ -56,7 +56,7 @@ const missionsSlice = createSlice({
           }
           return mission;
         });
-      })
+      });
   },
 });
 
