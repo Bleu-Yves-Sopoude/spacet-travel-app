@@ -3,6 +3,7 @@ import './App.css';
 import Navigations from './components/Navigations';
 import Rocket from './components/Rocket';
 import Mission from './components/Mission';
+import Profile from './components/myProfile';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Rocket />} />
         <Route path="/missions" element={<Mission />} />
-        <Route path="/profile" element={<myProfile />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );
