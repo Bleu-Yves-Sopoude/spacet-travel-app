@@ -1,0 +1,59 @@
+.rocketsList {
+  margin: 20px;
+}
+
+.rocketsList li {
+  display: flex;
+  gap: 40px;
+  height: 100%;
+  margin: 50px 0;
+}
+
+.rocketsList li .rocketImgageContainer {
+  max-width: 250px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.111);
+}
+
+.rocketsList li .rocketImgageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rocketsList li .rocketDescription p {
+  max-width: 600px;
+  width: 100%;
+  line-height: 1.7rem;
+  color: #334155;
+  margin-top: 20px;
+}
+
+.rocketsList li .rocketDescription p span {
+  background-color: #4f46e5;
+  padding: 4px 10px;
+  margin-right: 3px;
+  color: white;
+  border-radius: 5px;
+}
+
+.rocketsList li .rocketDescription h2 {
+  color: #334155;
+}
+
+.rocketsList li .rocketDescription button {
+  margin-top: 20px;
+  padding: 14px 40px;
+  border-radius: 5px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.rocketsList li .rocketDescription button.cancel {
+  background-color: rgba(128, 128, 128, 0.21);
+  color: gray;
+  border: 1px solid rgba(128, 128, 128, 0.514);
+}

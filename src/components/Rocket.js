@@ -1,6 +1,8 @@
-import { React, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import React from "react";
+import { useEffect } from "react";
+import "./Rocket.css";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchRockets } from "../redux/rockets/rocketsSlice.js";
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
@@ -16,19 +18,23 @@ const Rocket = () => {
         <div>Loading ...</div>
       ) : (
         <ul className="rocketsList">
-          {rocketsdata.data.map((e) => (
-            <>
-              <li key={e.id}>
-                {e.flickr_images && <img src={e.flickr_images} alt={e.name} />}
-                <h2>{e.name}</h2>
-                <p>
-                  {!e.reserved && <p style={{background:"red", padding:"40px"}}>Reserved</p>} {e.description}
-                </p>
-              </li>
-              <hr/>
-            </>
+          {rocketsdata.data.map((rocket) => {
+            return (
+              <li key={rocket.id}>
+                <div className="rocketImgageContainer">
+                  <img src={rocket.flickr_images} alt="" />
+                </div>
 
-          ))}
+                <div className="rocketDescription">
+                  <h2>{rocket.name} </h2>
+                  <p>
+                    <>{rocket.reserved && <span>reserved</span>}</>
+                    {rocket.description}
+                  </p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
