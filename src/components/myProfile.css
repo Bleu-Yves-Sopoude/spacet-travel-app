@@ -1,0 +1,36 @@
+p {
+  font-size: 16px;
+}
+
+.profile-container {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.column {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.message {
+  color: #4a5b73;
+  margin-top: 40px;
+}
+
+.column ul {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  list-style: none;
+  margin-top: 40px;
+}
+
+.column > ul:last-child {
+  border-bottom: none;
+}
+
+.column ul li {
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}

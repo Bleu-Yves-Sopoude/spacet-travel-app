@@ -35,7 +35,7 @@ export const cancelReservation = createAsyncThunk(
       return { ...rocket, reserved: false };
     });
     return newState;
-  }
+  },
 );
 
 const rocketsSlice = createSlice({
