@@ -1,7 +1,7 @@
-import { React, useEffect } from "react";
-import "./Rocket.css";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchRockets } from "../redux/rockets/rocketsSlice";
+import { React, useEffect } from 'react';
+import './Rocket.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchRockets } from '../redux/rockets/rocketsSlice';
 
 const Rocket = () => {
   const rocketsdata = useSelector((state) => state.rockets);
