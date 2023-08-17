@@ -1,8 +1,9 @@
 import { render } from '@testing-library/react';
+import React from 'react';
 import Header from '../components/header';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
-import React from 'react';
+
 const links = [
   {
     id: 3,
@@ -21,13 +22,11 @@ const links = [
   },
 ];
 
-const AppMock = () => {
-  return (
+const AppMock = () =>  (
     <BrowserRouter>
       <Header links={links} />
     </BrowserRouter>
   );
-};
 
 describe('test header', () => {
   it('should render all links', () => {

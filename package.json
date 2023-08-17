@@ -44,7 +44,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-react": "^7.22.5",
-    "@reduxjs/toolkit": "^1.9.5",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.4.2"
   },
