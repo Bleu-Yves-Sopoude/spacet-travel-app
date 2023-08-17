@@ -1,22 +1,22 @@
-  .table-container {
-    max-width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .table-container table {
-    margin: 0 auto;
-  }
-  
-  .table-container .working {
-    vertical-align: middle;
-  }
-  
-  .working .Bag {
-    font-size: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+.table-container {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.table-container table {
+  margin: 0 auto;
+}
+
+.table-container .working {
+  vertical-align: middle;
+}
+
+.working .Bag {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
