@@ -40,27 +40,27 @@ const Mission = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>Mission</th>
+            <th style={{ width: '180px'}}>Mission</th>
             <th>Description</th>
-            <th>Status</th>
-            <th>&nbsp;</th>
+            <th style={{ width: '180px'}}>Status</th>
+            <th style={{ width: '180px'}}>&nbsp;</th>
           </tr>
         </thead>
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
               <td><h5>{mission.mission_name}</h5></td>
-              <td><p>{mission.description}</p></td>
-              <td>
+              <td className="working"><p>{mission.description}</p></td>
+              <td className="working">
                 {mission.reserved ? (
                   <h5><Badge bg="success">Active Member</Badge></h5>
                 ) : (
                   <h5><Badge bg="primary">NOT A MEMBER</Badge></h5>
                 )}
               </td>
-              <td>
-                <div className="d-flex align-items-center justify-content-center">
-                  <Button variant="outline-dark" onClick={() => handlejoinmission(mission.mission_id, mission.reserved)}>
+              <td className="working">
+                <div className="d-flex align-items-center justify-content-center btn-container">
+                  <Button variant={mission.reserved ? 'outline-danger' : 'outline-primary'} onClick={() => handlejoinmission(mission.mission_id, mission.reserved)}>
                     {mission.reserved ? 'Leave Mission' : 'Join Mission'}
                   </Button>
                 </div>
