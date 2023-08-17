@@ -15,7 +15,7 @@ const Header = () => (
         <nav>
           <ul>
             <li>
-              <NavLink path="/ content="Rocket" />
+              <NavLink path="/" content="Rocket" />
             </li>
 
             <li>
