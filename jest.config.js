@@ -6,5 +6,4 @@ module.exports = {
   },
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['./setupTests.js'],
-  "type": "module",
 };
