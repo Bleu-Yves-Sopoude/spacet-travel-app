@@ -40,10 +40,10 @@ const Mission = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th style={ { width: '180px'} }>Mission</th>
+            <th style={{ width: '180px' }}>Mission</th>
             <th>Description</th>
-            <th style={ { width: '150px'} }>Status</th>
-            <th style={ { width: '180px'} }>&nbsp;</th>
+            <th style={{ width: '150px' }}>Status</th>
+            <th style={{ width: '180px' }}>&nbsp;</th>
           </tr>
         </thead>
         <tbody>
