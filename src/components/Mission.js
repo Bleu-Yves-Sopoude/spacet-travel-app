@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Mission.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -34,8 +36,8 @@ const Mission = () => {
   }
 
   return (
-    <div>
-      <Table striped bordered hover size="sm" className="margin-30">
+    <div className="table-container">
+      <Table striped bordered hover size="sm">
         <thead>
           <tr>
             <th>Mission</th>
@@ -56,7 +58,13 @@ const Mission = () => {
                   <h5><Badge bg="primary">NOT A MEMBER</Badge></h5>
                 )}
               </td>
-              <td className="d-flex align-items-center"><Button variant="outline-dark" onClick={() => handlejoinmission(mission.mission_id, mission.reserved)}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</Button></td>
+              <td>
+                <div className="d-flex align-items-center justify-content-center">
+                  <Button variant="outline-dark" onClick={() => handlejoinmission(mission.mission_id, mission.reserved)}>
+                    {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                  </Button>
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
