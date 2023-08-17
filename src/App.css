@@ -1,25 +1,4 @@
-.link,
-.pale {
-  text-decoration: none;
-}
 
-.bookCard {
-  justify-content: space-between;
-  align-items: center;
-  height: 10.625rem;
-  max-width: 81rem;
-  margin: 4.813rem;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #fff;
-}
-
-.active {
-  opacity: 1;
-  text-decoration: underline;
-  display: inline;
-}
 
 * {
   padding: 0;
@@ -29,41 +8,4 @@
 body {
   font-family: Arial, Tahoma, serif;
   color: #263238;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #cfd8dc;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav li {
-  padding-left: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #0d47a1;
-}
-
-@media only screen and (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding-top: 0.5rem;
-  }
-
-  nav li {
-    padding: 0.5rem 0;
-  }
 }
