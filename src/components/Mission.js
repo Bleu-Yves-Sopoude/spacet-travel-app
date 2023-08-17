@@ -35,7 +35,7 @@ const Mission = () => {
 
   return (
     <div>
-      <Table striped bordered hover>
+      <Table striped bordered hover size="sm" className="margin-30">
         <thead>
           <tr>
             <th>Mission</th>
