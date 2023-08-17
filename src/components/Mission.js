@@ -42,7 +42,7 @@ const Mission = () => {
           <tr>
             <th style={{ width: '180px'}}>Mission</th>
             <th>Description</th>
-            <th style={{ width: '180px'}}>Status</th>
+            <th style={{ width: '150px'}}>Status</th>
             <th style={{ width: '180px'}}>&nbsp;</th>
           </tr>
         </thead>
@@ -53,9 +53,9 @@ const Mission = () => {
               <td className="working"><p>{mission.description}</p></td>
               <td className="working">
                 {mission.reserved ? (
-                  <h5><Badge bg="success">Active Member</Badge></h5>
+                  <h5 className="Bag"><Badge bg="primary">Active Member</Badge></h5>
                 ) : (
-                  <h5><Badge bg="primary">NOT A MEMBER</Badge></h5>
+                  <h5 className="Bag"><Badge bg="secondary">NOT A MEMBER</Badge></h5>
                 )}
               </td>
               <td className="working">
