@@ -23,7 +23,7 @@ const Header = () => (
             </li>
 
             <li>
-              <div className="separater">|</div>
+              <div className="separater"></div>
             </li>
 
             <li>
