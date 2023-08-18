@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
-import { Header } from '../components/header';
+import Header from '../components/header';
 
 const links = [
   {
