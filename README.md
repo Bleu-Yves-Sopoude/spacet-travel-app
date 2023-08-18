@@ -125,7 +125,7 @@ npx eslint .
 
 <!-- AUTHOR -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **Bleu Yves Sopoude (MrBlue)**
 
