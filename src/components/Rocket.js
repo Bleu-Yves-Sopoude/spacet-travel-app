@@ -13,8 +13,10 @@ const Rocket = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rocketsdata.data.length === 0) {
+      dispatch(fetchRockets());
+    }
+  });
 
   const bookRocket = (rocketId, reserved) => {
     if (reserved) {
