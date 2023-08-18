@@ -24,6 +24,8 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.3);
   list-style: none;
   margin-top: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .column > ul:last-child {
