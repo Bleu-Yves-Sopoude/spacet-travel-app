@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: 4rem;
+  height: 6rem;
   border-bottom: 0.1px solid #e2e8f0;
   background-color: white;
 }
@@ -22,8 +22,8 @@
   display: flex;
   list-style: none;
   position: relative;
-  bottom: 4px;
   margin-right: 100px;
+  margin-bottom: 2px;
   gap: 30px;
 }
 
