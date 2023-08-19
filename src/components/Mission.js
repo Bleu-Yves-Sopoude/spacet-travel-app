@@ -13,8 +13,8 @@ const Mission = () => {
   useEffect(() => {
     if (missions.length === 0) {
       dispatch(fetchmissions());
-    } },
-    []);
+    }
+  }, []);
 
   const handlejoinmission = (missionId, reserved) => {
     if (reserved) {
