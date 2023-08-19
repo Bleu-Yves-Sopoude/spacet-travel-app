@@ -12,7 +12,7 @@ const Mission = () => {
   const { missions, isLoading, error } = useSelector((state) => state.missions);
   useEffect(() => {
     if (missions.length === 0) {
-       dispatch(fetchmissions());
+      dispatch(fetchmissions());
     } },
     []);
 
