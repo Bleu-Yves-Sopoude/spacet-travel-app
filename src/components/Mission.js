@@ -11,8 +11,10 @@ const Mission = () => {
   const dispatch = useDispatch();
   const { missions, isLoading, error } = useSelector((state) => state.missions);
   useEffect(() => {
-    dispatch(fetchmissions());
-  }, [dispatch]);
+    if (missions.length === 0) {
+      dispatch(fetchmissions());
+    }
+  }, []);
 
   const handlejoinmission = (missionId, reserved) => {
     if (reserved) {
